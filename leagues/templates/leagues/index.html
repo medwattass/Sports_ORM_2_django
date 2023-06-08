@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sports Leagues</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+
+<body class="bg-secondary">
+
+	<div class="container">
+
+		<h1 class="h1 text-light">Sophia's leagues</h1>
+		<table class="table table-dark table-hover">
+			<thead>
+				<tr class="text-warning">
+					<th scope="col">ID</th>
+					<th scope="col">Name</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for league in sophia_leagues %}
+				<tr>
+					<td>{{league.id}}</td>
+					<td>{{league.name}}</td>
+				</tr>
+				{% empty %}
+				<tr>
+					<td>No leagues found. Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a
+						href="{% url 'make_data' %}">here</a> (but be prepared to wait).</td>
+					<td></td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+
+
+
+		<h1 class="h1 text-light">Atlantic soccer teams</h1>
+		<table class="table table-dark table-hover">
+			<thead>
+				<tr class="text-warning">
+					<th scope="col">ID</th>
+					<th scope="col">Team's name</th>
+					<th scope="col">Team's location</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for team in atlantic_soccer_teams %}
+				<tr>
+					<td>{{team.id}}</td>
+					<td>{{team.team_name}}</td>
+					<td>{{team.location}}</td>
+				</tr>
+				{% empty %}
+				<tr>
+					<td>No teams found. Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a
+						href="{% url 'make_data' %}">here</a> (but be prepared to wait).</td>
+					<td></td>
+					<td></td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+
+		<h1 class="h1 text-light">Sophia's teams</h1>
+		<table class="table table-dark table-hover">
+			<thead>
+				<tr class="text-warning">
+					<th scope="col">ID</th>
+					<th scope="col">Team's name</th>
+					<th scope="col">Team's location</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for team in sophia_teams %}
+				<tr>
+					<td>{{team.id}}</td>
+					<td>{{team.team_name}}</td>
+					<td>{{team.location}}</td>
+				</tr>
+				{% empty %}
+				<tr>
+					<td>No teams found. Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a
+						href="{% url 'make_data' %}">here</a> (but be prepared to wait).</td>
+					<td></td>
+					<td></td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+
+		<h1 class="h1 text-light">Samuel's teams</h1>
+		<table class="table table-dark table-hover">
+			<thead>
+				<tr class="text-warning">
+					<th scope="col">ID</th>
+					<th scope="col">Team's name</th>
+					<th scope="col">Team's location</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for team in samuel_teams %}
+				<tr>
+					<td>{{team.id}}</td>
+					<td>{{team.team_name}}</td>
+					<td>{{team.location}}</td>
+				</tr>
+				{% empty %}
+				<tr>
+					<td>No teams found. Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a
+						href="{% url 'make_data' %}">here</a> (but be prepared to wait).</td>
+					<td></td>
+					<td></td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+
+		<h1 class="h1 text-light">Jacob's teams</h1>
+		<table class="table table-dark table-hover">
+			<thead>
+				<tr class="text-warning">
+					<th scope="col">ID</th>
+					<th scope="col">Team's name</th>
+					<th scope="col">Team's location</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for team in jacob_teams %}
+				<tr>
+					<td>{{team.id}}</td>
+					<td>{{team.team_name}}</td>
+					<td>{{team.location}}</td>
+				</tr>
+				{% empty %}
+				<tr>
+					<td>No teams found. Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a
+						href="{% url 'make_data' %}">here</a> (but be prepared to wait).</td>
+					<td></td>
+					<td></td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+
+		<h1 class="h1 text-light">Teams with 12 players</h1>
+		<table class="table table-dark table-hover">
+			<thead>
+				<tr class="text-warning">
+					<th scope="col">ID</th>
+					<th scope="col">Team's name</th>
+					<th scope="col">Team's location</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for team in teams_with_12_players %}
+				<tr>
+					<td>{{team.id}}</td>
+					<td>{{team.team_name}}</td>
+					<td>{{team.location}}</td>
+				</tr>
+				{% empty %}
+				<tr>
+					<td>No teams found. Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a
+						href="{% url 'make_data' %}">here</a> (but be prepared to wait).</td>
+					<td></td>
+					<td></td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+
+
+
+		<h1 class="h1 text-light">Boston penguins players</h1>
+		<table class="table table-dark table-hover">
+			<thead>
+				<tr class="text-warning">
+					<th scope="col">ID</th>
+					<th scope="col">Player's first name</th>
+					<th scope="col">Player's first name</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for player in boston_penguins_players %}
+				<tr>
+					<td>{{player.id}}</td>
+					<td>{{player.first_name}}</td>
+					<td>{{player.last_name}}</td>
+				</tr>
+				{% empty %}
+				<tr>
+					<td>No teams found. Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a
+						href="{% url 'make_data' %}">here</a> (but be prepared to wait).</td>
+					<td></td>
+					<td></td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+
+		<h1 class="h1 text-light">Baseball players</h1>
+		<table class="table table-dark table-hover">
+			<thead>
+				<tr class="text-warning">
+					<th scope="col">ID</th>
+					<th scope="col">Player's first name</th>
+					<th scope="col">Player's first name</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for player in int_baseball_players %}
+				<tr>
+					<td>{{player.id}}</td>
+					<td>{{player.first_name}}</td>
+					<td>{{player.last_name}}</td>
+				</tr>
+				{% empty %}
+				<tr>
+					<td>No teams found. Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a
+						href="{% url 'make_data' %}">here</a> (but be prepared to wait).</td>
+					<td></td>
+					<td></td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+
+		<h1 class="h1 text-light">Football lopez players</h1>
+		<table class="table table-dark table-hover">
+			<thead>
+				<tr class="text-warning">
+					<th scope="col">ID</th>
+					<th scope="col">Player's first name</th>
+					<th scope="col">Player's first name</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for player in am_football_lopez_players %}
+				<tr>
+					<td>{{player.id}}</td>
+					<td>{{player.first_name}}</td>
+					<td>{{player.last_name}}</td>
+				</tr>
+				{% empty %}
+				<tr>
+					<td>No teams found. Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a
+						href="{% url 'make_data' %}">here</a> (but be prepared to wait).</td>
+					<td></td>
+					<td></td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+
+		<h1 class="h1 text-light">Football players</h1>
+		<table class="table table-dark table-hover">
+			<thead>
+				<tr class="text-warning">
+					<th scope="col">ID</th>
+					<th scope="col">Player's first name</th>
+					<th scope="col">Player's first name</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for player in football_players %}
+				<tr>
+					<td>{{player.id}}</td>
+					<td>{{player.first_name}}</td>
+					<td>{{player.last_name}}</td>
+				</tr>
+				{% empty %}
+				<tr>
+					<td>No teams found. Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a
+						href="{% url 'make_data' %}">here</a> (but be prepared to wait).</td>
+					<td></td>
+					<td></td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+
+		<h1 class="h1 text-light">Flores players</h1>
+		<table class="table table-dark table-hover">
+			<thead>
+				<tr class="text-warning">
+					<th scope="col">ID</th>
+					<th scope="col">Player's first name</th>
+					<th scope="col">Player's first name</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for player in flores_players %}
+				<tr>
+					<td>{{player.id}}</td>
+					<td>{{player.first_name}}</td>
+					<td>{{player.last_name}}</td>
+				</tr>
+				{% empty %}
+				<tr>
+					<td>No teams found. Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a
+						href="{% url 'make_data' %}">here</a> (but be prepared to wait).</td>
+					<td></td>
+					<td></td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+
+		<h1 class="h1 text-light">Manitoba players</h1>
+		<table class="table table-dark table-hover">
+			<thead>
+				<tr class="text-warning">
+					<th scope="col">ID</th>
+					<th scope="col">Player's first name</th>
+					<th scope="col">Player's first name</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for player in manitoba_players %}
+				<tr>
+					<td>{{player.id}}</td>
+					<td>{{player.first_name}}</td>
+					<td>{{player.last_name}}</td>
+				</tr>
+				{% empty %}
+				<tr>
+					<td>No teams found. Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a
+						href="{% url 'make_data' %}">here</a> (but be prepared to wait).</td>
+					<td></td>
+					<td></td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+
+		<h1 class="h1 text-light">Wichita ex players</h1>
+		<table class="table table-dark table-hover">
+			<thead>
+				<tr class="text-warning">
+					<th scope="col">ID</th>
+					<th scope="col">Player's first name</th>
+					<th scope="col">Player's first name</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for player in wichita_ex_players %}
+				<tr>
+					<td>{{player.id}}</td>
+					<td>{{player.first_name}}</td>
+					<td>{{player.last_name}}</td>
+				</tr>
+				{% empty %}
+				<tr>
+					<td>No teams found. Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a
+						href="{% url 'make_data' %}">here</a> (but be prepared to wait).</td>
+					<td></td>
+					<td></td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+
+		<h1 class="h1 text-light">Atlantic Joshuas players</h1>
+		<table class="table table-dark table-hover">
+			<thead>
+				<tr class="text-warning">
+					<th scope="col">ID</th>
+					<th scope="col">Player's first name</th>
+					<th scope="col">Player's first name</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for player in atlantic_joshuas %}
+				<tr>
+					<td>{{player.id}}</td>
+					<td>{{player.first_name}}</td>
+					<td>{{player.last_name}}</td>
+				</tr>
+				{% empty %}
+				<tr>
+					<td>No teams found. Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a
+						href="{% url 'make_data' %}">here</a> (but be prepared to wait).</td>
+					<td></td>
+					<td></td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+
+		<h1 class="h1 text-light">All players order by team count</h1>
+		<table class="table table-dark table-hover">
+			<thead>
+				<tr class="text-warning">
+					<th scope="col">ID</th>
+					<th scope="col">Player's first name</th>
+					<th scope="col">Player's first name</th>
+					<th scope="col">Team count</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for player in players_with_team_count %}
+				<tr>
+					<td>{{player.id}}</td>
+					<td>{{player.first_name}}</td>
+					<td>{{player.last_name}}</td>
+					<td>{{player.team_count}}</td>
+				</tr>
+				{% empty %}
+				<tr>
+					<td>No teams found. Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a
+						href="{% url 'make_data' %}">here</a> (but be prepared to wait).</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+
+	</div>
+
+</body>
+
+</html>
